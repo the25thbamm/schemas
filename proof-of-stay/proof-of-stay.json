@@ -3,8 +3,8 @@
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/the25thbamm/schemas/master/proof-of-studentship.json-ld",
-      "jsonSchema": "https://raw.githubusercontent.com/the25thbamm/schemas/master/proof-of-studentship.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/the25thbamm/schemas/master/proof-of-stay/proof-of-stay.json-ld",
+      "jsonSchema": "https://raw.githubusercontent.com/the25thbamm/schemas/master/proof-of-stay/proof-of-stay.json"
     }
   },
   "required": [
