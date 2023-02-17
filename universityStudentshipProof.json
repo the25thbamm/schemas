@@ -1,26 +1,21 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://beta.api.schemas.serto.id/v1/public/university-studentship-proof/1.0/json-schema.json",
+  "type": "object",
   "$metadata": {
-    "slug": "university-studentship-proof",
-    "version": "1.0",
-    "icon": "🅤",
-    "discoverable": false,
     "uris": {
-      "jsonLdContextPlus": "https://beta.api.schemas.serto.id/v1/public/university-studentship-proof/1.0/ld-context-plus.json",
-      "jsonLdContext": "https://beta.api.schemas.serto.id/v1/public/university-studentship-proof/1.0/ld-context.json",
-      "jsonSchema": "https://beta.api.schemas.serto.id/v1/public/university-studentship-proof/1.0/json-schema.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/0xPolygonID/tutorial-examples/main/credential-schema/proof-of-dao-longevity.json-ld",
+      "jsonSchema": "https://raw.githubusercontent.com/0xPolygonID/tutorial-examples/main/credential-schema/proof-of-dao-longevity.json"
     }
   },
-  "title": "University Studentship Proof",
-  "description": "Proof to show if an holder is a student",
-  "type": "object",
   "required": [
     "@context",
+    "id",
     "type",
-    "issuer",
     "issuanceDate",
-    "credentialSubject"
+    "credentialSubject",
+    "credentialSchema",
+    "credentialStatus",
+    "issuer"
   ],
   "properties": {
     "@context": {
@@ -31,8 +26,7 @@
       ]
     },
     "id": {
-      "type": "string",
-      "format": "uri"
+      "type": "string"
     },
     "type": {
       "type": [
@@ -67,15 +61,6 @@
       "type": "string",
       "format": "date-time"
     },
-    "credentialSubject": {
-      "type": "object",
-      "properties": {
-        "student": {
-          "title": "Student",
-          "type": "boolean"
-        }
-      }
-    },
     "credentialSchema": {
       "type": "object",
       "required": [
@@ -89,6 +74,48 @@
         },
         "type": {
           "type": "string"
+        }
+      }
+    },
+    "subjectPosition": {
+      "type": "string",
+      "enum": [
+        "none",
+        "index",
+        "value"
+      ]
+    },
+    "merklizationRootPosition": {
+      "type": "string",
+      "enum": [
+        "none",
+        "index",
+        "value"
+      ]
+    },
+    "revNonce": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "updatable": {
+      "type": "boolean"
+    },
+    "credentialSubject": {
+      "type": "object",
+      "required": [
+        "id",
+        "studentEntryYear"
+      ],
+      "properties": {
+        "id": {
+          "title": "Credential Subject ID",
+          "type": "string",
+          "format": "uri"
+        },
+        "studentEntryYear": {
+          "type": "integer"
         }
       }
     }
