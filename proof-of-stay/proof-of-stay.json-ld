@@ -1,14 +1,14 @@
 {
   "@context": [
     {
-      "@version": 1.1,
+      "@version": 1.5,
       "@protected": true,
       "id": "@id",
       "type": "@type",
       "ProofOfStay": {
         "@id": "https://raw.githubusercontent.com/the25thbamm/schemas/master/proof-of-stay/proof-of-stay.json-ld#ProofOfStay",
         "@context": {
-          "@version": 1.1,
+          "@version": 1.5,
           "@protected": true,
           "id": "@id",
           "type": "@type",
