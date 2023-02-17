@@ -3,8 +3,8 @@
   "type": "object",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/0xPolygonID/tutorial-examples/main/credential-schema/proof-of-dao-longevity.json-ld",
-      "jsonSchema": "https://raw.githubusercontent.com/0xPolygonID/tutorial-examples/main/credential-schema/proof-of-dao-longevity.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/the25thbamm/schemas/master/proof-of-studentship-vocab.json-ld",
+      "jsonSchema": "https://raw.githubusercontent.com/the25thbamm/schemas/master/universityStudentshipProof.json"
     }
   },
   "required": [
